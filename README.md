@@ -37,7 +37,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-// Project forked and fully rebranded as Tredify. All assets and code are original or free-to-use.
+// Project forked and fully rebranded as clickShop. All assets and code are original or free-to-use.
 ```
 
 **Installation**
@@ -73,7 +73,7 @@ CLOUDINARY_CLOUD_NAME =
 
 JWT_SECRET =
 
-ADMIN_EMAIL = "admin@trendify.com" #For testing only
+ADMIN_EMAIL = "admin@clickshop.com" #For testing only
 
 ADMIN_PASSWORD = "admin@123" #For testing only
 

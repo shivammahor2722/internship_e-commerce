@@ -1,8 +1,7 @@
 # 🛒 MERN E-Commerce Website
-# 🛍️ Tredify E-Commerce Platform
 
 Welcome to the **MERN E-Commerce Website**! This project is a feature-rich e-commerce application built using the powerful MERN stack, complete with an intuitive user-facing store and an all-encompassing admin dashboard.
-Welcome to **Tredify**! This is a modern, original e-commerce platform with a user-friendly store and a comprehensive admin dashboard. All branding, design, and content have been customized for uniqueness.
+Welcome to **clickShop**! This is a modern, original e-commerce platform with a user-friendly store and a comprehensive admin dashboard. All branding, design, and content have been customized for uniqueness.
 
 ## ✨ Features
 

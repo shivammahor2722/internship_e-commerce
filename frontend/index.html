@@ -3,7 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trendify | Find What Moves You</title>
+    <title>clickShop | Discover Your Style</title>
+    <meta name="description" content="clickShop - A modern, original e-commerce platform for fashion, tech, and lifestyle products." />
+    <link rel="icon" href="/src/assets/logo.png" type="image/png" />
+   <style>
+  body {
+    margin: 0;
+    font-family: 'Outfit', 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f9fafb 0%, #edf1ff 50%, #e0e7ff 100%);
+    background-attachment: fixed;
+    color: #1a1a1a;
+    min-height: 100vh;
+    line-height: 1.6;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Subtle animated gradient glow */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  body {
+    background: linear-gradient(-45deg, #f8fafc, #e0e7ff, #f5f3ff, #e2e8f0);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+  /* Optional: add subtle shadow depth to main containers */
+  .container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  }
+</style>
+
   </head>
   <body>
     <div id="root"></div>

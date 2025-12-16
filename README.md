@@ -1,8 +1,7 @@
 # 🛒 MERN E-Commerce Website
-# 🛍️ Tredify E-Commerce Platform
 
 Welcome to the **MERN E-Commerce Website**! This project is a feature-rich e-commerce application built using the powerful MERN stack, complete with an intuitive user-facing store and an all-encompassing admin dashboard.
-Welcome to **Tredify**! This is a modern, original e-commerce platform with a user-friendly store and a comprehensive admin dashboard. All branding, design, and content have been customized for uniqueness.
+Welcome to **clickShop**! This is a modern, original e-commerce platform with a user-friendly store and a comprehensive admin dashboard. All branding, design, and content have been customized for uniqueness.
 
 ## ✨ Features
 
@@ -38,7 +37,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-// Project forked and fully rebranded as Tredify. All assets and code are original or free-to-use.
+// Project forked and fully rebranded as clickShop. All assets and code are original or free-to-use.
 ```
 
 **Installation**
@@ -74,7 +73,7 @@ CLOUDINARY_CLOUD_NAME =
 
 JWT_SECRET =
 
-ADMIN_EMAIL = "admin@trendify.com" #For testing only
+ADMIN_EMAIL = "admin@clickshop.com" #For testing only
 
 ADMIN_PASSWORD = "admin@123" #For testing only
 

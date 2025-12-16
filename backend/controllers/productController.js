@@ -23,14 +23,20 @@ const addProduct = async (req, res) => {
       (image) => image !== undefined
     );
 
-    let imageUrls = await Promise.all(
-      productImages.map(async (image) => {
-        let result = await cloudinary.uploader.upload(image.path, {
-          resource_type: "image",
-        });
-        return result.secure_url;
-      })
-    );
+    let imageUrls = [];
+    if (process.env.CLOUDINARY_NAME && productImages.length > 0) {
+      imageUrls = await Promise.all(
+        productImages.map(async (image) => {
+          let result = await cloudinary.uploader.upload(image.path, {
+            resource_type: "image",
+          });
+          return result.secure_url;
+        })
+      );
+    } else {
+      // Cloudinary not configured; use local paths as fallback
+      imageUrls = productImages.map((img) => img.path);
+    }
 
     const productData = {
       name,

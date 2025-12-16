@@ -11,7 +11,7 @@ const ShopContextProvider = (props) => {
   const [token,setToken]= useState('');
   const navigate = useNavigate();
 const backendUrl =import.meta.env.VITE_BACKEND_URL
-  const currency = "$";
+  const currency = "₹";
   const delivery_fee = 10;
   const [products,setProducts]=useState([]);
   useEffect(() => {

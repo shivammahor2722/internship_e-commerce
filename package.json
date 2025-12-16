@@ -1,0 +1,15 @@
+{
+  "name": "e-comm-snapdeal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start-all": "concurrently \"cd backend && npm run server\" \"cd frontend && npm run dev\" \"cd admin && npm run dev\"",
+    "start-backend": "cd backend && npm run server",
+    "start-frontend": "cd frontend && npm run dev",
+    "start-admin": "cd admin && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}

@@ -90,14 +90,14 @@ const Collection = () => {
         >
           FILTERS
           <img
-            className={`h-3 sm:hidden ${showFilter ? "rotate-90" : ""}`}
+            className={`h-3 sm:hidden ₹{showFilter ? "rotate-90" : ""}`}
             src={assets.dropdown_icon}
             alt="Dropdown"
           />
         </p>
         {/* Category Filters */}
         <div
-          className={`border border-gray-300 pl-5 py-3 mt-6 ${
+          className={`border border-gray-300 pl-5 py-3 mt-6 ₹{
             showFilter ? "" : "hidden"
           } sm:block`}
         >
@@ -137,7 +137,7 @@ const Collection = () => {
         </div>
         {/* Sub Category Filters */}
         <div
-          className={`border border-gray-300 pl-5 py-3 my-5 ${
+          className={`border border-gray-300 pl-5 py-3 my-5 ₹{
             showFilter ? "" : "hidden"
           } sm:block`}
         >
@@ -177,7 +177,7 @@ const Collection = () => {
         </div>
         {/* Clear Filters Button */}
         <button
-          className={`px-4 py-2 mt-1 text-white bg-black rounded hover:bg-gray-900 ${
+          className={`px-4 py-2 mt-1 text-white bg-black rounded hover:bg-gray-900 ₹{
             showFilter ? "block" : "hidden"
           } sm:block`}
           onClick={clearFilters}

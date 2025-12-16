@@ -9,11 +9,11 @@ const Hero = () => {
             <div className='text-[#414141]'>
                 <div className='flex items-center gap-2'>
                     <p className='w-8 md:w-11 h-[2px] bg-[#414141]'></p>
-                    <p className='text-sm font-medium md:text-base'>OUR BEST SELLERS</p>
+                    <p className='text-sm font-medium md:text-base'>Bringing the store to your door</p>
                 </div>
-                <h1 className='text-3xl leading-relaxed sm:py-3 lg:text-5xl prata-regular'>Latest Arrivals</h1>
+                <h1 className='text-3xl leading-relaxed sm:py-3 lg:text-5xl prata-regular'>Shop with style</h1>
                 <div className='flex items-center gap-2'>
-                    <p className='text-sm font-semibold md:text-base'>SHOP NOW</p>
+                    <p className='text-sm font-semibold md:text-base'>Shop the trend, Love the price</p>
                     <p className='w-8 md:w-11 h-[1px] bg-[#414141]'></p>
                 </div>
             </div>

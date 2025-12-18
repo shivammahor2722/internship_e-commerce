@@ -9,6 +9,7 @@ import userRouter from "./routes/userRoute.js";
 import productRouter from "./routes/productRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import path from "path";
 
 // Connect to MongoDB & Cloudinary
 connectDB();
@@ -21,6 +22,8 @@ const port = process.env.PORT || 5000;
 // Middleware
 app.use(express.json());
 app.use(cors());
+// Serve uploaded files when Cloudinary is not configured
+app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 
 // API routes
 app.use("/api/user", userRouter);

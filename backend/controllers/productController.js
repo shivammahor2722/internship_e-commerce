@@ -1,4 +1,5 @@
 import { v2 as cloudinary } from "cloudinary";
+import path from "path";
 import productModel from "../models/productModel.js";
 
 // INFO: Route for adding a product
@@ -24,18 +25,30 @@ const addProduct = async (req, res) => {
     );
 
     let imageUrls = [];
+    const host = req.get("host");
+    const protocol = req.protocol;
+
     if (process.env.CLOUDINARY_NAME && productImages.length > 0) {
+      // Upload each image to Cloudinary, but don't fail the whole request if one image fails.
       imageUrls = await Promise.all(
         productImages.map(async (image) => {
-          let result = await cloudinary.uploader.upload(image.path, {
-            resource_type: "image",
-          });
-          return result.secure_url;
+          try {
+            const result = await cloudinary.uploader.upload(image.path, {
+              resource_type: "image",
+            });
+            return result.secure_url;
+          } catch (err) {
+            console.log("Cloudinary upload failed for", image.path, err.message || err);
+            // Fallback to server-hosted upload URL for this image
+            return `${protocol}://${host}/uploads/${path.basename(image.path)}`;
+          }
         })
       );
     } else {
-      // Cloudinary not configured; use local paths as fallback
-      imageUrls = productImages.map((img) => img.path);
+      // Cloudinary not configured; use server-served uploads as public URLs
+      imageUrls = productImages.map((img) =>
+        `${protocol}://${host}/uploads/${path.basename(img.path)}`
+      );
     }
 
     const productData = {

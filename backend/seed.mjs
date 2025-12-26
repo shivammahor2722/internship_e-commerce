@@ -10,7 +10,7 @@ const run = async () => {
   try {
     await connectDB()
     // Create admin user (if not exists)
-    const adminEmail = process.env.ADMIN_EMAIL || 'admin@trendify.com'
+    const adminEmail = process.env.ADMIN_EMAIL || 'admin@clickshop.com'
     const adminPassword = process.env.ADMIN_PASSWORD || 'admin@123'
     const existingAdmin = await userModel.findOne({ email: adminEmail })
     if (!existingAdmin) {
